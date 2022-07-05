@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta author="Abhimanyu Koul">
+  <meta name="description" content="Welcome to HTML Assigment">
+  <title>HTML Assignment Webpage</title>
+</head>
+<body style="background-color: #000000">
+  <p>
+    <fieldset name="timer" id="timer" style="background-color:#FFEBCD">
+      <legend style="background-color: #FF8C00; color: white; padding: 5px 10px; border: solid; border-color: black">Time</legend>
+      <p id="time"></p>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="loginForm" id="loginForm" style="background-color:#FFEBCD">
+      <legend style="background-color: #FFFFFF; color: #00008B; padding: 5px 10px; border: solid; border-color: black">User Login</legend>
+      <form class="login" action="temp.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username"></br>
+        <label for="password">Password:</label>&nbsp;
+        <input type="password" id="password"></br>
+        <input type="submit" id="signIn" value="Sign-In" style="width:225px">
+      </form>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="gender" id="genderFieldset" style="background-color:#FFEBCD">
+      <legend style="background-color: #008000; color: white; padding: 5px 10px; border: solid; border-color: black">Gender</legend>
+      <input type="radio" id="Male" value="Male" name="Gender">
+      <label for="Male">Male</label></br>
+      <input type="radio" id="Female" value="Female" name="Gender">
+      <label for="Female">Female</label></br>
+      <input type="radio" id="Other" value="Other" name="Gender">
+      <label for="Other">Other</label></br>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="foodPreferences" id="foodPreferencesFieldset" style="background-color:#FFEBCD">
+      <legend style="background-color: #FF8C00; color: white; padding: 5px 10px; border: solid; border-color: black">Food Preferences</legend>
+      <input type="checkbox" id="Cottage Cheese" value="Cottage Cheese" name="foodPreferences">
+      <label for="Cottage Cheese">Cottage Cheese</label></br>
+      <input type="checkbox" id="Chicken" value="Chicken" name="foodPreferences">
+      <label for="Chicken">Chicken</label></br>
+      <input type="checkbox" id="Lamb" value="Lamb" name="foodPreferences">
+      <label for="Lamb">Lamb</label></br>
+      <input type="checkbox" id="Fish" value="Fish" name="foodPreferences">
+      <label for="Fish">Fish</label></br>
+      <input type="checkbox" id="Pizza" value="Pizza" name="foodPreferences">
+      <label for="Pizza">Pizza</label></br>
+      <input type="checkbox" id="Burger" value="Burger" name="foodPreferences">
+      <label for="Burger">Burger</label></br>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="favoriteSports" id="favoriteSportsFieldset" style="background-color:#FFEBCD">
+      <legend style="background-color: #FFFFFF; color: #00008B; padding: 5px 10px; border: solid; border-color: black">Sports Preferences</legend>
+      <label for="selectSports">Favorite Sport:</label>
+      <select name="selectSports" id="selectSports">
+        <option>Baseball</option>
+        <option>Basketball</option>
+        <option>Cricket</option>
+        <option>Football</option>
+        <option>Handball</option>
+        <option>Volleyball</option>
+      </select>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="list" id="rankCountryList" style="background-color:#FFEBCD">
+      <legend style="background-color: #008000; color: white; padding: 5px 10px; border: solid; border-color: black">Country Rankings</legend>
+      <table name="listTable" id="listTable">
+        <tr>
+          <td>
+            <ol class="orderedList" id="orderedList1">
+              <li>India</li>
+              <li>New Zealand</li>
+              <li>England</li>
+              <li>Australia</li>
+            </ol>
+          </td>
+          <td>
+            <ul class="unOrderedList" id="unOrderedList1">
+              <li>India</li>
+              <li>New Zealand</li>
+              <li>England</li>
+              <li>Australia</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="image" id="imageFieldset" style="background-color:#FFEBCD">
+      <legend style="background-color: #FF8C00; color: white; padding: 5px 10px; border: solid; border-color: black">Scenic Image</legend>
+      <img src="Images/Image_1.jpeg" alt="Image 1"></br>
+    </fieldset>
+  </p>
+  <p>
+    <fieldset name="frame" id="frameFieldset" style="background-color:#FFEBCD">
+      <legend style="background-color: #FFFFFF; color: #00008B; padding: 5px 10px; border: solid; border-color: black">IFrame Button</legend>
+      <iframe src="button.html" style="border:none" title="iframeButton" height="30px">
+      </iframe>
+    </fieldset>
+  </p>
+  <script>
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date();
+
+    // Time calculations for hours, minutes and seconds
+    var hours = now.getHours().toString().fontsize(7);
+    var minutes = now.getMinutes().toString().fontsize(7);
+    var seconds = now.getSeconds().toString().fontsize(7);
+
+    // Display the result in the element with id="time"
+    document.getElementById("time").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+  }, 1000);
+  </script>
+</body>
+</html>
